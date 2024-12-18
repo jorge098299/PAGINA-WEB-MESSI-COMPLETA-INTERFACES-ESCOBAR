@@ -1,0 +1,15 @@
+    <!-- PrimeNG y PrimeIcons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/primeng@15.2.0/resources/themes/lara-light-indigo/theme.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/primeng@15.2.0/resources/primeng.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/primeicons@6.0.0/primeicons.css">
+<!-- Contenedor para el menú de navegación -->
+<div class="menu-container">
+  <p-menu [model]="items" [style]="{'width': 'auto'}" class="horizontal-menu"></p-menu>
+  </div>
+  
+  <!-- Contenedor de contenido para las rutas -->
+  <div class="content-container">
+    <router-outlet></router-outlet>
+  </div>
+  
+<router-outlet></router-outlet>

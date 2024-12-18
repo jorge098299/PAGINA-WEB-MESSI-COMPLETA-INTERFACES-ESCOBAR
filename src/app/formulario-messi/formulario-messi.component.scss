@@ -1,0 +1,180 @@
+// Variables
+$primary-color: #0d47a1; // Azul
+$secondary-color: #d32f2f; // Rojo
+$input-border-color: #ccc;
+$input-focus-border-color: #007bff;
+$background-color: #f4f4f4;
+$font-family: 'Arial', sans-serif;
+
+// Contenedor principal
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  
+  h2 {
+    text-align: center;
+    color: $primary-color;
+    margin-bottom: 20px;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+
+    label {
+      font-size: 1rem;
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+      color: #333;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid $input-border-color;
+      border-radius: 4px;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+
+      &:focus {
+        border-color: $input-focus-border-color;
+        outline: none;
+      }
+
+      &::placeholder {
+        color: #aaa;
+      }
+    }
+
+    textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      padding-right: 30px; // Para el espacio del icono de la flecha
+      background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"%3E%3Cpath d="M6 9l6 6 6-6"%3E%3C/path%3E%3C/svg%3E');
+      background-repeat: no-repeat;
+      background-position: right 10px center;
+    }
+
+    .checkbox-group {
+      input[type='checkbox'] {
+        margin-right: 10px;
+      }
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: $primary-color;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+
+      &:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  // Botones de PrimeNG
+  .button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+
+    .p-button {
+      width: 100px;
+      height: 40px;
+      font-size: 1rem;
+      border-radius: 4px;
+
+      &.p-mr-2 {
+        margin-right: 10px;
+      }
+
+      // Estilos para diferentes tipos de botones
+      &.p-button-success {
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        &:hover {
+          background-color: darken(#4caf50, 10%);
+        }
+      }
+
+      &.p-button-danger {
+        background-color: #f44336;
+        color: #fff;
+        border: none;
+        &:hover {
+          background-color: darken(#f44336, 10%);
+        }
+      }
+
+      &.p-button-warning {
+        background-color: #ff9800;
+        color: #fff;
+        border: none;
+        &:hover {
+          background-color: darken(#ff9800, 10%);
+        }
+      }
+
+      &.p-button-info {
+        background-color: #2196f3;
+        color: #fff;
+        border: none;
+        &:hover {
+          background-color: darken(#2196f3, 10%);
+        }
+      }
+
+      &.p-button-secondary {
+        background-color: #607d8b;
+        color: #fff;
+        border: none;
+        &:hover {
+          background-color: darken(#607d8b, 10%);
+        }
+      }
+    }
+  }
+}
+
+// Responsive design
+@media (max-width: 600px) {
+  .container {
+    padding: 15px;
+  }
+
+  input,
+  textarea,
+  select,
+  button {
+    font-size: 0.9rem;
+  }
+
+  .p-button {
+    width: 100%;
+  }
+}

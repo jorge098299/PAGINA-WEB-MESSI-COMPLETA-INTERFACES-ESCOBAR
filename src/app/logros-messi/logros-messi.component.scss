@@ -1,0 +1,130 @@
+// Variables de colores
+$primary-color: #1e90ff;         // Azul primario
+$secondary-color: #f4f4f4;       // Color de fondo secundario
+$accent-color: #4682B4;          // Azul acentuado
+$background-color: #fff;         // Fondo blanco
+$timeline-color: #e1e1e1;        // Color de la línea del timeline
+$circle-color: #4caf50;          // Color del círculo del icono
+$circle-border-color: #fff;      // Color del borde del círculo del icono
+
+// Estilos generales para la tarjeta del timeline
+.card {
+  background-color: $background-color;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+// Estilos para el título de la tarjeta
+h2.text-center {
+  color: $primary-color;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+// Estilos para el timeline
+.timeline-content {
+  position: relative;
+  padding-left: 50px;
+  margin-bottom: 20px;
+  border-left: 2px solid $timeline-color;
+
+  // Estilo para la imagen del logro
+  .timeline-image {
+    width: 100%;
+    height: auto;
+    max-width: 600px; // Limitar el ancho máximo para evitar que se haga demasiado pequeña
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  // Estilo para el icono del timeline
+  .timeline-icon {
+    position: absolute;
+    left: -20px;
+    top: 10px;
+    background-color: $circle-color;
+    border-radius: 50%;
+    padding: 10px;
+    color: white;
+    font-size: 1.5rem;
+    border: 2px solid $circle-border-color;
+  }
+
+  // Estilo para el año del logro
+  h4 {
+    color: $accent-color;
+    font-size: 1.5rem;
+    margin: 10px 0;
+  }
+
+  // Estilo para el título del logro
+  h5 {
+    font-size: 1.2rem;
+    color: $primary-color;
+    font-weight: bold;
+  }
+
+  // Estilo para la descripción del logro
+  p {
+    font-size: 1rem;
+    color: $primary-color;
+  }
+}
+
+// Ajustes en el estilo de la timeline
+p-timeline {
+  background-color: $secondary-color;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: 768px) {
+    .p-timeline-event {
+      flex-direction: row;
+    }
+
+    // Alineación alterna en pantallas grandes
+    p-timeline[align="alternate"] .p-timeline-event:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+  }
+
+  @media (max-width: 767px) {
+    // Ajustes para pantallas pequeñas
+    .timeline-content {
+      padding-left: 30px; // Reducir el espacio a la izquierda
+      margin-bottom: 15px; // Reducir el margen inferior
+    }
+
+    .timeline-icon {
+      left: -10px; // Ajuste del icono para pantallas pequeñas
+      top: 5px; // Ajuste de la posición del icono
+      font-size: 1.2rem; // Reducir el tamaño del icono
+    }
+
+    h2.text-center {
+      font-size: 1.5rem; // Ajustar tamaño del título en pantallas pequeñas
+    }
+
+    h4 {
+      font-size: 1.2rem; // Ajuste del tamaño del año
+    }
+
+    h5 {
+      font-size: 1rem; // Ajuste del tamaño del título del logro
+    }
+
+    p {
+      font-size: 0.9rem; // Ajuste del tamaño de la descripción
+    }
+
+    // Evitar que las imágenes se reduzcan demasiado
+    .timeline-image {
+      max-width: 90%; // Limitar el tamaño máximo de la imagen a 90% del contenedor
+      margin: 0 auto; // Centrar la imagen
+    }
+  }
+}

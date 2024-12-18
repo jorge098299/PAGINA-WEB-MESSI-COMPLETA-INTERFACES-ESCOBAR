@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGROS MESSI</title>
+    <!-- PrimeNG y PrimeIcons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/primeng@15.2.0/resources/themes/lara-light-indigo/theme.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/primeng@15.2.0/resources/primeng.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/primeicons@6.0.0/primeicons.css">
+</head>
+<body>
+  <!-- Timeline de logros de Messi -->
+  <div class="card">
+    <h2 class="text-center">Logros de Lionel Messi</h2>
+    <p-timeline [value]="messiTimeline" align="alternate">
+      <ng-template pTemplate="content" let-event>
+        <div class="timeline-content">
+          <!-- Icono superior -->
+          <div class="timeline-icon">
+            <i [class]="event.icon" ></i>
+          </div>
+          
+          <!-- Imagen del logro -->
+          <img [src]="event.image" alt="Logro Messi" class="timeline-image"  />
+          
+          <!-- Año del logro con icono -->
+          <h4>
+            <i [class]="event.icon" ></i> {{ event.year }}
+          </h4>
+          
+          <!-- Título del logro -->
+          <h5>{{ event.title }}</h5>
+          
+          <!-- Descripción del logro -->
+          <p>{{ event.description }}</p>
+        </div>
+      </ng-template>
+    </p-timeline>
+  </div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULARIO</title>
+        <!-- PrimeNG y PrimeIcons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/primeng@15.2.0/resources/themes/lara-light-indigo/theme.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/primeng@15.2.0/resources/primeng.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/primeicons@6.0.0/primeicons.css">
+</head>
+<body>
+     <!-- Formulario de contacto -->
+ <div class="container">
+    <h2>Formulario de Contacto</h2>
+    <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="firstName">Nombre:</label>
+            <input type="text" id="firstName" formControlName="firstName" placeholder="Ingresa tu nombre" />
+        </div>
+
+        <div class="form-group">
+            <label for="lastName">Apellidos:</label>
+            <input type="text" id="lastName" formControlName="lastName" placeholder="Ingresa tus apellidos" />
+        </div>
+
+        <div class="form-group">
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" formControlName="email" placeholder="Ingresa tu correo electrónico" />
+        </div>
+
+        <div class="form-group">
+            <label for="cedula">Cédula:</label>
+            <input type="text" id="cedula" formControlName="cedula" placeholder="Ingresa tu cédula" />
+        </div>
+
+        <div class="form-group">
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" formControlName="direccion" placeholder="Ingresa tu dirección" />
+        </div>
+
+        <div class="form-group">
+            <label for="gender">Género:</label>
+            <select id="gender" formControlName="gender">
+                <option value="">Seleccione una opción</option>
+                <option value="male">Masculino</option>
+                <option value="female">Femenino</option>
+                <option value="other">Otro</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="message">OPINION:</label>
+            <textarea id="message" rows="4" formControlName="message" placeholder="Escribe tu mensaje aquí"></textarea>
+        </div>
+
+        <div class="form-group checkbox-group">
+            <label>
+                <input type="checkbox" formControlName="agree" />
+                Acepto los términos y condiciones
+            </label>
+        </div>
+
+        <div class="form-group">
+            <button type="submit">Enviar</button>
+        </div>
+
+        <div class="button-container">
+            <p-button label="Botón 1" icon="pi pi-check" (click)="onSubmit()" severity="success" class="p-mr-2"></p-button>
+            <p-button label="Botón 2" icon="pi pi-times" (click)="onSubmit()" severity="danger" class="p-mr-2"></p-button>
+            <p-button label="Botón 3" icon="pi pi-search" (click)="onSubmit()" class="p-mr-2"></p-button>
+            <p-button label="Botón 4" icon="pi pi-pencil" (click)="onSubmit()" class="p-mr-2"></p-button>
+            <p-button label="Botón 5" icon="pi pi-cloud" (click)="onSubmit()" class="p-mr-2"></p-button>
+            <p-button label="Botón 6" icon="pi pi-phone" (click)="onSubmit()" class="p-mr-2"></p-button>
+            <p-button label="Botón 7" icon="pi pi-cog" (click)="onSubmit()" class="p-mr-2"></p-button>
+            <p-button label="Botón 8" icon="pi pi-bolt" (click)="onSubmit()" class="p-mr-2"></p-button>
+            <p-button label="Botón 9" icon="pi pi-plus" (click)="onSubmit()" class="p-mr-2"></p-button>
+            <p-button label="Botón 10" icon="pi pi-minus" (click)="onSubmit()" class="p-mr-2"></p-button>
+            <p-button label="Botón 11" icon="pi pi-undo" (click)="onSubmit()" class="p-mr-2"></p-button>
+            <p-button label="Botón 12" icon="pi pi-redo" (click)="onSubmit()" class="p-mr-2"></p-button>
+            <p-button label="Botón 13" icon="pi pi-trash" (click)="onSubmit()" severity="warning" class="p-mr-2"></p-button>
+            <p-button label="Botón 14" icon="pi pi-download" (click)="onSubmit()" class="p-mr-2"></p-button>
+            <p-button label="Botón 15" icon="pi pi-upload" (click)="onSubmit()" class="p-mr-2"></p-button>
+          </div>
+    </form>
+</div>
+
+<script src="https://code.angularjs.org/1.6.9/angular.min.js"></script>
+</body>
+</html>

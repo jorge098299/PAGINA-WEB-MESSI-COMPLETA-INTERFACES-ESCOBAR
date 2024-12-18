@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messi - Historia y Contacto</title>
+
+    <!-- PrimeNG y PrimeIcons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/primeng@15.2.0/resources/themes/lara-light-indigo/theme.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/primeng@15.2.0/resources/primeng.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/primeicons@6.0.0/primeicons.css">
+</head>
+
+<body>
+
+   
+
+    <!-- Carrusel de imágenes de Messi -->
+    <div class="carousel-container">
+        <p-carousel [value]="images" [numVisible]="1" [numScroll]="1" [responsiveOptions]="responsiveOptions" 
+                    [circular]="true" [autoplay]="true" [autoplayInterval]="3000">
+            <ng-template pTemplate="item" let-item>
+                <div class="carousel-item">
+                    <img [src]="item" alt="Imagen de Messi" />
+                </div>
+            </ng-template>
+        </p-carousel>
+    </div>
+
+    <!-- Sección de historia de Messi -->
+    <div class="content historia-messi">
+      <h2 class="section-title">La Historia de Lionel Messi</h2>
+      <p class="intro-text">Lionel Andrés Messi Cuccittini (nacido el 24 de junio de 1987 en Rosario, Argentina) es un futbolista profesional argentino considerado por muchos como el mejor jugador de fútbol de todos los tiempos...</p>
+      <p class="highlight-text">Messi ha ganado múltiples títulos individuales y colectivos, incluyendo el Balón de Oro, la Copa América con Argentina y numerosas Ligas y Copas con Barcelona...</p>
+      <div class="history-highlight">
+          <img src="https://pbs.twimg.com/media/BzwpAiYIAAAE-CC?format=jpg&name=small" alt="Lionel Messi" class="messi-image">
+          <blockquote class="quote">“PORQUE SOLO HAY ALGO MEJOR QUE UN SUEÑO, HACER QUE SE CUMPLA.” - Lionel Messi</blockquote>
+      </div>
+  </div>
+
+
+ 
+</body>
+<router-outlet></router-outlet>
+</html>
+

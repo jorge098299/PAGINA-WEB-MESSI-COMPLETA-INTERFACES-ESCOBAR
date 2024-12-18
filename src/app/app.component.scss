@@ -1,0 +1,23 @@
+/* Estilo principal del contenedor del menú */
+.horizontal-menu .ui-menu-list {
+  display: flex; /* Hace que los elementos del menú sean horizontales */
+  flex-direction: row; /* Alinea en fila */
+  padding: 0; /* Elimina el padding predeterminado */
+  gap: 10px; /* Espacio entre los botones */
+}
+
+.horizontal-menu .ui-menuitem {
+  display: inline-block; /* Asegura que los ítems estén alineados horizontalmente */
+}
+
+.horizontal-menu .ui-menuitem-link {
+  text-decoration: none;
+  color: #333;
+  padding: 8px 12px; /* Ajusta el tamaño del botón */
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.horizontal-menu .ui-menuitem-link:hover {
+  background-color: #e0e0e0; /* Efecto hover */
+}

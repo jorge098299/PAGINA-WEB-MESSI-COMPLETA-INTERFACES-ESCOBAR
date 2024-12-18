@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrera de Messi</title>
+    <!-- PrimeNG y PrimeIcons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/primeng@15.2.0/resources/themes/lara-light-indigo/theme.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/primeng@15.2.0/resources/primeng.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/primeicons@6.0.0/primeicons.css">
+</head>
+<body>
+    <!-- Cards sobre Messi -->
+    <div class="card-container">
+        <!-- Card de Messi -->
+        <p-card header="MESSI" subheader="LIONEL ANDRES MESSI CUCCITTINI" [style]="{ width: '300px' }">
+            <ng-template pTemplate="header">
+                <img alt="Messi Card" src="https://elcomercio.pe/resizer/YHY7Dp1fjREMy66i8NaloQwJ-Pg=/1200x677/smart/filters:format(jpeg):quality(75)/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/2FNB7CND3VH2VP5IXSJ2YWTKWM.jfif" />
+            </ng-template>
+            <ng-template pTemplate="content">
+                <div class="flex justify-content-center align-items-center">
+                    <i class="pi pi-user text-4xl" style="color: #1e90ff;"></i> <!-- Icono de Messi -->
+                </div>
+                <p>
+                    Lionel Messi es un futbolista argentino, considerado el mejor de la historia. Destaca por su habilidad, goles y títulos, incluyendo un Mundial en 2022.
+                </p>
+            </ng-template>
+            <ng-template pTemplate="footer">
+                <div class="flex justify-content-center align-items-center mt-1" style="height: 80px">
+                    <p-button 
+                        label="PULGUITA TOMICA" 
+                        severity="success" 
+                        styleClass="w-full p-3 text-xl font-bold border-round shadow-lg hover:scale-105 transition-transform bg-blue-900">
+                    </p-button>
+                </div>
+            </ng-template>
+        </p-card>
+
+        <!-- Card de su carrera en Barcelona -->
+        <p-card header="CARRERA EN BARCELONA" subheader="EL REY DEL CAMP NOU" [style]="{ width: '300px' }">
+            <ng-template pTemplate="header">
+                <img alt="Messi Barcelona" src="https://i.pinimg.com/736x/79/03/1d/79031d191ba261f560712309fb6c0e4f.jpg" />
+            </ng-template>
+            <ng-template pTemplate="content">
+                <div class="flex justify-content-center align-items-center">
+                    <i class="pi pi-map-marker text-4xl" style="color: #ff6347;"></i> <!-- Icono de estadio -->
+                </div>
+                <p>
+                    Messi pasó casi toda su carrera profesional en el Barcelona, donde logró innumerables títulos y récords, convirtiéndose en el máximo goleador histórico del club.
+                </p>
+            </ng-template>
+            <ng-template pTemplate="footer">
+                <div class="flex justify-content-center align-items-center mt-1" style="height: 80px">
+                    <p-button 
+                        label="EL BARCELONISTA" 
+                        severity="success" 
+                        styleClass="w-full p-3 text-xl font-bold border-round shadow-lg hover:scale-105 transition-transform bg-red-900">
+                    </p-button>
+                </div>
+            </ng-template>
+        </p-card>
+
+        <!-- Card de su paso por la selección argentina -->
+        <p-card header="SELECCIÓN ARGENTINA" subheader="EL DÍOS DEL FÚTBOL" [style]="{ width: '300px' }">
+            <ng-template pTemplate="header">
+                <img alt="Messi Selección" src="https://tn.com.ar/resizer/v2/lionel-messi-con-la-copa-del-mundo-el-titulo-mas-deseado-por-los-futbolistas-foto-fifa-LCH57TE4BNDV3DVOANRRIRHHMU.jpg?auth=d14790d5cf0cabe7aecd23dac1328a0856c0c9a3a2a5019d664166a58064bcbc&width=1440" />
+            </ng-template>
+            <ng-template pTemplate="content">
+                <div class="flex justify-content-center align-items-center">
+                    <i class="pi pi-flag text-4xl" style="color: #32cd32;"></i> 
+                </div>
+                <p>
+                    Messi, con la selección argentina, logró su mayor sueño al ganar la Copa Mundial de la FIFA 2022 en Qatar, además de la Copa América 2021, cerrando con broche de oro su carrera internacional.
+                </p>
+            </ng-template>
+            <ng-template pTemplate="footer">
+                <div class="flex justify-content-center align-items-center mt-1" style="height: 80px">
+                    <p-button 
+                        label="EL GOAT ARGENTINO" 
+                        severity="success" 
+                        styleClass="w-full p-3 text-xl font-bold border-round shadow-lg hover:scale-105 transition-transform bg-blue-900">
+                    </p-button>
+                </div>
+            </ng-template>
+        </p-card>
+
+        <!-- Card de su impacto en el PSG -->
+        <p-card header="CARRERA EN PSG" subheader="LA ESTRELLA PARISINA" [style]="{ width: '300px' }">
+            <ng-template pTemplate="header">
+                <img alt="Messi PSG" src="https://phantom-elmundo.unidadeditorial.es/2821124a5c46c93fb4c4830405129831/resize/473/f/webp/assets/multimedia/imagenes/2021/10/19/16346783870037.jpg" />
+            </ng-template>
+            <ng-template pTemplate="content">
+                <div class="flex justify-content-center align-items-center">
+                    <i class="pi pi-info-circle text-4xl" style="color: #ff4500;"></i> 
+                </div>
+                <p>
+                    Tras dejar Barcelona, Messi continuó su carrera en el PSG, formando parte de un tridente letal junto a Neymar y Mbappé, continuando con su legado en el fútbol europeo.
+                </p>
+            </ng-template>
+            <ng-template pTemplate="footer">
+                <div class="flex justify-content-center align-items-center mt-1" style="height: 80px">
+                    <p-button 
+                        label="CAMPEÓN EN PARÍS" 
+                        severity="success" 
+                        styleClass="w-full p-3 text-xl font-bold border-round shadow-lg hover:scale-105 transition-transform bg-red-900">
+                    </p-button>
+                </div>
+            </ng-template>
+        </p-card>
+    </div>
+</body>
+</html>
